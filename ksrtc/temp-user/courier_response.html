@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function random()
+		{
+			var random_no;
+			random_no = Math.random()*99999999;
+			random_no = Math.floor(random_no);
+			return random_no;
+		}
+	</script> 
+</head>
+<body>
+<form method="post" action="/rand">
+<script>
+var t;
+t=random();
+</script>
+Please note the below reference number for future purpose:
+<script>
+	document.write (t);
+</script>
+</form>
+</body>
+</html>

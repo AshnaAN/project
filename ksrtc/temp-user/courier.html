@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Courier Service</title>
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  	<link rel="stylesheet" href="{% static 'couriers.css' %}" type="text/css">
+	</head>
+	<body>
+		<div class="main">
+			<h2 class="abc def">COURIER REGISTRATION</h2>
+			<div class="smain">
+				<form method="post" action="/cour" id="1">
+					{% csrf_token %}
+					<h2 class="fon bac">SENDERS DETAILS</h2><hr>
+					Sender's name :<input type="text" name="Sname" placeholder="Sender Name" required><br>
+					<label>Source Location :</label><input type="text" name="Sloc" placeholder="Location" required><br>
+					<label>Mobile Number :</label><input type="tel" name="smobno" placeholder="Mobile number" required  pattern="[0-9]+">
+					<br>
+					<label>E-mail :</label><input type="email" name="smail" placeholder="xxx@gmail.com" required><br>
+					<label>Address :</label>
+					<input type="text" placeholder="address" name="saddr"> <br>
+					<label>Pincode:</label><input type="tel" name="pin" placeholder="Pincode" required  pattern="[0-9]+">
+					<br>
+<br> <h2 class="fon bac">RECIPIENTS DETAILS</h2><hr>
+				<label>Recipient Name : </label><input type="text" name="Rname" placeholder="Recipient Name" required><br>
+				<label>Destination :</label><input type="text" name="Dloc" placeholder="Destination Location" required><br>
+				<label>Mobile Number :</label><input type="tel" name="rmobno" placeholder="Mobile number" required pattern="[0-9]+" required><br>
+				<input type="SUBMIT" name="submit" value="SUBMIT" id="but">
+			</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

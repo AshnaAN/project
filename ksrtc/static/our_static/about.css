@@ -1,0 +1,58 @@
+		body{
+			font-family: "Lato", sans-serif;
+    		font-style: italic;
+    		font-style: oblique;
+    		font-family: initial;
+    		font-size: 14px;
+		}
+		h1{
+			text-align: center;
+			color: #1A5119;
+			font-family: "Lato", sans-serif;
+    		font-style: italic;
+    		font-style: oblique;
+    		font-family: initial;
+		}
+		h2.hd{
+			color: white;
+			text-align:left;
+			font-family: "Lato", sans-serif;
+    		font-style: italic;
+    		font-style: oblique;
+    		font-family: initial;
+			padding:15px;
+		}
+		.pa{
+			background-color: #1A5119;
+			border-radius: 3px;
+		}
+		.fo{
+			background-color: #1A5119;
+		}
+		h2.no{
+			color:white;
+			text-align: left;
+			font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-style: oblique;
+    font-family: initial;
+			padding: 15px;
+		}
+		.second{
+			background-color: #f2f2f2;;
+			padding:40px;
+			font: Arial;
+			margin-top: 20px;
+			color: black;
+			text-align: left;
+			border-radius: 5px;
+			line-height: 1.6;
+		}
+	.outer{
+		background-color:#f2f2f2;;
+		color:black;
+		padding:20px;
+		text-align: left;
+		border-radius: 5px;
+		line-height: 1.6;
+	}

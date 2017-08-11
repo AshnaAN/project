@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<!--<link rel="stylesheet" type="text/css" href="admin login.css">-->
+	<link rel="stylesheet" href="{% static 'admin.css' %}" type="text/css">
+</head>
+<body>
+	<div class="header">
+		<h1>ADMINISTRATOR LOGIN</h1>
+	</div>
+	<div class="card">
+		<div style="width=500px;">
+		<form method="POST" action="/xyz">
+			{% csrf_token %}
+			<label>Administrator Name:</label><input type="text" name="username" placeholder="Enter Name"><br>
+			<label>Password:</label><input type="password" name="password" placeholder="Enter password"><br>
+			<div style="color:red;">
+		{{result}}
+	</div>
+
+			<input type="submit" name="Proceed" value="LogIn"><br>
+		
+		</form>
+	</div>
+	</div>
+
+	
+</body>
+</html>

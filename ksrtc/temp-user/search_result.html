@@ -1,0 +1,46 @@
+<head>
+	<title> Search Result </title>
+	<style type="text/css">
+		td,th{
+			border : 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div>
+
+		<table>
+			<thead>
+				<tr> 
+					<th> Name </th>
+					<th> Number </th>
+				 	<th> Origin </th> 
+				 	<th> Route </th>
+				 	<th> Destination </th> 
+				 	<th> Avialable Days </th>
+				 	<th> Book Your Bus </th>
+				 	
+				</tr>
+			</thead>
+
+
+			<tbody>
+				{% for d in data %}
+				<tr> 
+					<td> {{d.name}} </td>
+					<td> {{d.number}} </td>
+					<td> {{d.src}} </td>
+					<td> {{d.route}} </td>
+					<td> {{d.dest}} </td>
+					<td> {{d.avail}} </td>
+					<td> <a href="\book"> BOOK </a> </td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+	</div>
+
+</body>

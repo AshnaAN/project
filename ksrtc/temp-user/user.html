@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<title>new user</title>
+	<link rel="stylesheet" type="text/css" href="user.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+  <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <script src="https://use.fontawesome.com/9fb635ce10.js"></script> 
+</head>
+<body >
+	<div class="sform">
+    <h2 class="hed fea">NEW USER</h2>
+    <div class="form">
+      
+  		<form method="post" action="http://127.0.0.1:8000/response">
+        {% csrf_token %}
+  			<label>First Name: </label><input type="text" name="firstname" placeholder="Your First Name" required>
+  			<label>Last Name: </label><input type="text" name="lastname" placeholder="Your Last Name" required ><br>
+        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+    	  <label>Gender:</label>
+    	    <input type="radio" value="male" name="gender" checked style="width:13%"> Male 
+    	    <input type="radio" value="female" name="gender" style="width:13%; margin-top:25px;"> Female
+            <br>
+    		<label>Mobile Number: </label><input type="number" name="mobilenum" placeholder="Mobile Number" required><br>
+    		<label>E-mail : </label><input type="email" name="email" placeholder="xxx@gmail.com"><br>
+    		<label>Password : </label><input type="password" name="password" placeholder="Password" required><br>
+    		<label>Confirm Password : </label><input type="password" name="cpassword" placeholder="Type your password again" required><br>
+        <p style="color: red;">
+        {{error}}</p>
+    		<!-- <input type="submit" name="Submit" value="SUBMIT" style=" position: absolute;left: 280px; margin-top:50px; width: 100px;"> 	 -->	   
+        <button>SUBMIT</button>
+		  </form>
+    </div>
+	</div>
+
+</body>
+</html>

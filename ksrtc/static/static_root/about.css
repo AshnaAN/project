@@ -1,0 +1,35 @@
+
+		h1{
+			text-align: center;
+		}
+		h2.hd{
+			color: red;
+			text-align:left;
+			padding:15px;
+		}
+		.pa{
+			background-color: white;
+			border-radius: 3px;
+		}
+		.fo{
+			background-color: white;
+		}
+		h2.no{
+			color:red;
+			text-align: left;
+			padding: 15px;
+		}
+		.second{
+			background-color: black;
+			padding:40px;
+			font: Arial;
+			margin-top: 20px;
+			color: white;
+			border-radius: 5px;
+		}
+	.outer{
+		background-color:black;
+		color:white;
+		padding:20px;
+		border-radius: 5px;
+	}

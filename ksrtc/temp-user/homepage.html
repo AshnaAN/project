@@ -1,0 +1,182 @@
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/62fb547ebd.js"></script>
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+
+<style>
+body {font-family: "Lato", sans-serif;}
+
+input[type="submit"] {
+    cursor: pointer;
+    color: black;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-style: oblique;
+    font-family: initial;
+    background: #1a1616;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #1A5119;
+}
+
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: white;
+    background-color: #2d4e49;
+}
+
+
+body {
+       /* background-image: url("Uniiik.jpg");*/
+       background-image:url( "{% static '17.jpg' %}");
+        background-size: 1300px 780px;
+        background-repeat: no-repeat;
+} 
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: #571616;
+    width: 200px;
+height: 40px;
+}
+.fa-2x {
+    font-size: 2em;
+    color: black;
+}
+p.one
+{
+  position: absolute;
+  bottom: -400px;
+  border-radius: 20%
+  left: 60px;
+width: 400px; 
+height: 350px;
+background-color: white;
+}
+.col-sm-4 {
+    width: 33.33333333%;
+    min-height: 287px;
+    opacity: 0.6;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #1A5119;
+    color: white;
+    border-radius: 15px;
+    width: 150px;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">KSRTC</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home">HOME</a></li>
+      <li><a href="bhome">BUS HIRE</a></li>
+      <li><a href="chome">COURIER</a></li>
+      <li><a href="/depots">DEPOTS</a></li>
+      <li><a href="/fares">FARES</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<form style="
+    position: absolute;
+    left: 120px;
+    top: 250px;" method="POST" action="/search"> {% csrf_token %}     
+  <input style="text-indent: 33px; background-color: #d5f8f4;opacity: 0.6;border-radius: 8px;color:#1A5119" name="search" placeholder="FROM" type="text"> 
+<!--<input style="text-indent: 33px; background: #EEFF9F0;"type="text" name="search" placeholder="FROM">  -->    
+<input style="text-indent: 33px;background-color: #d5f8f4;opacity: 0.6;border-radius: 8px;color:#1A5119;"type="text" name="track" placeholder="TO">
+ <input style="text-indent: 35px;background-color: #d5f8f4;opacity: 0.6;border-radius: 8px;color:#1A5119" id="datepicker" placeholder="DATE" >
+<input type="submit" value="SUBMIT">
+  </form>
+<i style="position:absolute; top: 257px; left:535px;opacity: 0.8;color: #1A5119;" class="fa fa-calendar-o fa-2x" ></i> 
+
+
+<i style="position:absolute; top: 257px; left:125px;opacity: 0.8;color: #1A5119;"class="fa fa-bus fa-2x" ></i>
+
+<i style="position:absolute; top: 257px; left:330px;opacity: 0.8;color: #1A5119;"class="fa fa-bus fa-2x" ></i>
+
+</div>
+
+     <div class="col-sm-4" style="background-color:lavenderblush;position: absolute;bottom: -110px;left:-2px"><h3>
+<strong>
+      Book Bus Tickets with KSRTC </strong></h3>
+<p>
+Say goodbye to long queues and welcome online bus booking! Booking bus tickets has gone easier with ksrtc.com. You need not visit your nearest bus stand to book bus tickets.
+ Just log on to ksrtc.com, fill in the requisite information and book bus tickets online in minutes. Search for various buses online, pick as per your comfort &amp; book according to your choice. Alongside you can also take your pick on suitable boarding points &amp; departure time for bus ticket booking online.
+
+</p>
+     </div>
+    <div class="col-sm-4" style="background-color:lavender;position: absolute;bottom: -110px;right:434px">
+<h3> <strong>Tracking </strong></h3>
+ Book bus from KSRTC.com &amp; get zero booking fees. 
+Track your bus with our ‘Track My Bus’ feature and know the location of bus .Stay informed and keep your family informed! 
+
+    </div>
+    <div class="col-sm-4" style="background-color:lavenderblush;position: absolute;bottom: -110px;right:0px">
+    <h3><strong>Top Destinations  </strong></h3>
+   <ul>
+   <li> Allepey</li>
+    <li> Guruvayur</li>
+    <li> Trivandrum</li>
+    <li> Kochi</li>
+    <li> Munnar</li>
+  </ul>
+    </div>
+  
+
+    <footer style="position: absolute;bottom:-140px;left:0px;">
+    <a href="#">Contact us </a> 
+    &nbsp; &nbsp;
+    <a href="/about">About us </a>
+    </footer>
+  <div style="position: absolute;bottom: -170px;left:500px;">
+<a>
+<i class="fa fa-twitter-square fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a style="color: #0f9015;">
+<i class="fa fa-whatsapp fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a>
+<i class="fa fa-facebook-official fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+</div>
+
+</body>
+</html>

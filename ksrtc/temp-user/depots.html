@@ -1,0 +1,941 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<link rel="stylesheet" type="text/css" href="depots.css">-->
+		<link rel="stylesheet" href="{% static 'ss.css' %}" type="text/css">
+		<title>Depots</title>
+		<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+
+	<style> h1.abc{
+    
+    font: 'Headland One';
+    color: white   ;
+    position: absolute;
+	left: 75px;
+	width: 800px;
+	top: 61px;
+
+}
+.def{
+	background-color: #1A5119;
+	margin:  0px 175px 0px;
+	margin-top: 25px;
+	padding: 15px;
+	width: 610px;
+	border-radius: 10px 10px 0 0px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+</style>
+	</head>
+	<body>
+		{% include 'navbar.html' %}
+
+			
+		<table class="table-fill" style="position: absolute;
+left: 250px;top:158px;">
+			<div class="main">
+	       	 <h1 class="abc def">BUS STATIONS</h1>
+			</div>
+			<thead>
+				<tr>
+					<th class="tl">#</th>
+					<th class="tl">Office</th>
+					<th class="tl">Contact Us</th>
+				</tr>
+			</thead>
+			<tbody class="table-hover">
+				<tr>
+					<td class="tl">1</td>
+					<td class="tl">ADOOR<br>Zone:2<br>Dist: PTA</td>
+					<td class="tl"> 0473-4224764 (24 x 7) <br>
+ 									adr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ADOOR</td>
+				</tr>
+				<tr>
+					<td class="tl">2</td>
+					<td class="tl">ALAPPUZHA<br>Zone:2<br> Dist: ALP</td>
+					<td class="tl">  0477-2252501 (24 x 7)<br> 
+									 alp@kerala.gov.in <br>
+									 OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, 	ALAPPUZHA</td>
+				</tr>
+				<tr>
+					<td class="tl">3</td>
+					<td class="tl">ALUVA<br>Zone:3<br>Dist: EKM</td>
+					<td class="tl"> 0484-2624242 (24 x 7) <br>
+									alv@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ALUVA</td>				
+				</tr>
+				<tr>
+					<td class="tl">4</td>
+					<td class="tl">ANAYARA<br>Zone:1<br>Dist: TVM</td>
+					<td class="tl">	0471-2749400 (24 x 7)<br> 
+									anr.ksrtc@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ANAYARA</td>
+				</tr>
+				<tr>
+					<td class="tl">5</td>
+					<td class="tl">ANKAMALI <br>
+								   Zone:3 <br>
+								   Dist: EKM</td>
+					<td class="tl"> 0484-2453050 (24 x 7)<br> 
+									ank@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ANKAMALI</td>
+				</tr>
+					<td class="tl">6</td>
+					<td class="tl">	ARYANAD <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0472-2853900 (24 x 7) <br>
+									ard@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ARYANAD</td>
+				</tr>
+				<tr>
+					<td class="tl">7</td>
+					<td class="tl">	ARYANKAVU <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0475-2211300 (24 x 7) <br>
+									ark@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ARYANKAVU</td>
+				</tr>
+					<td class="tl">8</td>
+					<td class="tl">	ATTINGAL <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0470-2622202 (24 x 7)<br> 
+									atl@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ATTINGAL</td>
+				</tr>
+				<tr>
+					<td class="tl">9</td>
+					<td class="tl">	BANGALORE <br>
+									Zone:6 <br>
+									Dist: BNG</td>
+					<td class="tl"> 0802-6756666 (24 x 7) <br>
+									bng.ksrtc@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, BANGALORE</td>
+				</tr>
+				<tr>
+					<td class="tl">10</td>
+					<td class="tl">	CHADAYAMANGALAM <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0474-2476200 (24 x 7) <br>
+									cdm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, CHADAYAMANGALAM</td>
+				</tr>
+				<tr>
+					<td class="tl">11</td>
+					<td class="tl">	CHALAKUDY <br>
+									Zone:4 <br>
+									Dist: TSR</td>
+					<td class="tl"> 0480-2701638 (24 x 7) <br>
+									cld@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, CHALAKUDY</td>
+				</tr>
+				<tr>
+					<td class="tl">12</td>
+					<td class="tl">	CHANGANASSERY<br> 
+									Zone:3 <br>
+									Dist: KTM</td>
+					<td class="tl"> 0481-2420245 (24 x 7)<br> 
+									chr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, CHANGANASSERY</td>
+				</tr>
+				<tr>
+					<td class="tl">13</td>
+					<td class="tl">	CHATHANNUR <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0474-2592900 (24 x 7) <br>
+									cht@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, CHATHANNUR</td>
+				</tr>
+				<tr>
+					<td class="tl">14</td>
+					<td class="tl">	CHENGANOOR <br>
+									Zone:2 <br>
+									Dist: ALP</td>
+					<td class="tl"> 0479-2452352 (24 x 7) <br>
+									cgr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, CHENGANOOR</td>
+				</tr>
+				<tr>
+					<td class="tl">15</td>
+					<td class="tl">	CHERTHALA <br>
+									Zone:2 <br>
+									Dist: ALP</td>
+					<td class="tl"> 0478-2812582 (24 x 7) <br>
+									ctl@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, CHERTHALA</td>
+				</tr>
+				<tr>
+					<td class="tl">16</td>
+					<td class="tl">	CHITOOR <br>
+									Zone:4 <br>
+									Dist: PLK</td>
+					<td class="tl"> 0492-3227488 (24 x 7)<br> 
+									ctr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, CHITOOR</td>
+				</tr>
+				<tr>
+					<td class="tl">17</td>
+					<td class="tl">	EDATHUVA <br>
+									Zone:2 <br>
+									Dist: ALP</td>
+					<td class="tl"> 0477-2215400 (24 x 7) <br>
+									edt@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, EDATHUVA</td>
+				</tr>
+				<tr>
+					<td class="tl">18</td>
+					<td class="tl">	EDAPPAL </td>
+					<td class="tl"> 0494-2699751 (24 x 7) </td>
+				</tr>
+				<tr>
+					<td class="tl">19</td>
+					<td class="tl">	EENCHAKKAL <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2501180 (24 x 7) <br>
+									ekl@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, EENCHAKKAL</td>
+				</tr>
+				<tr>
+					<td class="tl">20</td>
+					<td class="tl">	EERATTUPETTAH <br>
+									Zone:3 <br>
+									Dist: KTM</td>
+					<td class="tl"> 0482-2272230 (24 x 7) <br>
+									etp@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, EERATTUPETTAH</td>
+				</tr>
+				<tr>
+					<td class="tl">21</td>
+					<td class="tl">	ERNAKULAM <br>
+									Zone:3 <br>
+									Dist: EKM</td>
+					<td class="tl">	0484-2372033 (24 x 7)<br> 
+									ekm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ERNAKULAM</td>
+				</tr>
+				<tr>
+					<td class="tl">22</td>
+					<td class="tl">	ERUMELY <br>
+									Zone:3 <br>
+									Dist: KTM</td>
+					<td class="tl"> 0482-8212345 (24 x 7) <br>
+									emy@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, ERUMELY</td>
+				</tr>
+				<tr>
+					<td class="tl">23</td>
+					<td class="tl">	GURUVAYOOR <br>
+									Zone:4 <br>
+									Dist: TSR</td>
+					<td class="tl"> 0487-2556450 (24 x 7) <br>
+									gvr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, GURUVAYOOR</td>
+				</tr>
+				<tr>
+					<td class="tl">24</td>
+					<td class="tl">	HARIPPAD <br>
+									Zone:2 <br>
+									Dist: ALP</td>
+					<td class="tl"> 0479-2412620 (24 x 7) <br>
+									hpd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, HARIPPAD</td>
+				</tr>
+				<tr>
+					<td class="tl">25</td>
+					<td class="tl">	IRINJALAKKUDA <br>
+									Zone:4 <br>
+									Dist: TSR</td>
+					<td class="tl"> 0480-2823990 (24 x 7)<br> 
+									ijk@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, IRINJALAKKUDA</td>
+				</tr>
+				<tr>
+					<td class="tl">26</td>
+					<td class="tl">	KALPETTA <br>
+									Zone:5 <br>
+									Dist: WND</td>
+					<td class="tl"> 0493-6202611 (24 x 7) <br>
+									kpt@kerala.gov.in<br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KALPETTA</td>
+				</tr>
+				<tr>
+					<td class="tl">27</td>
+					<td class="tl">	KANHANGAD<br>
+									Zone:5 <br>
+									Dist: KGD</td>
+					<td class="tl"> 0467-2200055 (24 x 7) <br>
+									khd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KANHANGAD</td>
+				</tr>
+				<tr>
+					<td class="tl">28</td>
+					<td class="tl">	KANIYAPURAM <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2752533 (24 x 7) <br>
+									kpm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KANIYAPURAM</td>
+				</tr>
+				<tr>
+					<td class="tl">29</td>
+					<td class="tl">	KANNUR <br>
+									Zone:5 <br>
+									Dist: KNR</td>
+					<td class="tl">	0497-2707777 (24 x 7) <br>
+									knr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KANNUR</td>
+				</tr>
+				<tr>
+					<td class="tl">30</td>
+					<td class="tl">	KARUNAGAPALLY <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl">	0476-2620466 (24 x 7) <br>
+									knp@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KARUNAGAPALLY</td>
+				</tr>
+				<tr>
+					<td class="tl">31</td>
+					<td class="tl">	KASARAGOD
+									Zone:5 <br>
+									Dist: KGD</td>
+					<td class="tl"> 0499-4230677 (24 x 7) <br>
+									kgd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KASARAGOD</td>
+				</tr>
+				<tr>
+					<td class="tl">32</td>
+					<td class="tl">	KATTAKADA <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2290381 (24 x 7) <br>
+									ktd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KATTAKADA</td>
+				</tr>
+				<tr>
+					<td class="tl">33</td>
+					<td class="tl">	KATTAPPANA <br>
+									Zone:3 <br>
+									Dist: IDK</td>
+					<td class="tl"> 0486-8252333 (24 x 7) <br>
+									ktp@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KATTAPPANA </td>
+				</tr>
+				<tr>
+					<td class="tl">34</td>
+					<td class="tl">	KAYAMKULAM <br>
+									Zone:2 <br>
+									Dist: ALP</td>
+					<td class="tl"> 0479-2442022 (24 x 7) <br>
+									kym@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KAYAMKULAM</td>
+				</tr>
+				<tr>
+					<td class="tl">35</td>
+					<td class="tl">	KILIMANOOR <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0470-2672217 (24 x 7) <br>
+									kmr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KILIMANOOR</td>
+				</tr>
+				<tr>
+					<td class="tl">36</td>
+					<td class="tl">	KODUNGALOOR <br>
+									Zone:4 <br>
+									Dist: TSR</td>
+					<td class="tl">	0480-2803155 (24 x 7)<br> 
+									kdr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KODUNGALOOR</td>
+				</tr>
+				<tr>
+					<td class="tl">37</td>
+					<td class="tl">	KOLLAM <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0474-2752008 (24 x 7) <br>
+									klm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KOLLAM</td>
+				</tr>
+				<tr>
+					<td class="tl">38</td>
+					<td class="tl">	KONNI <br>
+									Zone:2 <br>
+									Dist: PTA</td>
+					<td class="tl"> 0468-2244555 (24 x 7) <br>
+									kni@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KONNI</td>
+				</tr>
+				<tr>
+					<td class="tl">39</td>
+					<td class="tl">	KOOTHATTUKULAM <br>
+									Zone:3 <br>
+									Dist: EKM</td>
+					<td class="tl"> 0468-2253444 (24 x 7) <br>
+									kkm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KOOTHATTUKULAM</td>
+				</tr>
+				<tr>
+					<td class="tl">40</td>
+					<td class="tl">	KOTHAMANGALAM <br>
+									Zone:3 <br>
+									Dist: EKM</td>
+					<td class="tl"> 0485-2862202 (24 x 7) <br>
+									kmg@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KOTHAMANGALAM</td>
+				</tr>
+				<tr>
+					<td class="tl">41</td>
+					<td class="tl">	KOTTARAKKARA <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0474-2452622 (24 x 7) <br>
+									ktr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KOTTARAKKARA</td>
+				</tr>
+				<tr>
+					<td class="tl">42</td>
+					<td class="tl">	KOTTAYAM <br>
+									Zone:3 <br>
+									Dist: KTM</td>
+					<td class="tl"> 0481-2562908 (24 x 7) <br>
+									ktm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KOTTAYAM</td>
+				</tr>
+				<tr>
+					<td class="tl">43</td>
+					<td class="tl">	KOZHIKODE <br>
+									Zone:5 <br>
+									Dist: KKD</td>
+					<td class="tl"> 0495-2723796 (24 x 7)<br> 
+									kkd@kerala.gov.in<br> 
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KOZHIKODE</td>
+				</tr>
+				<tr>
+					<td class="tl">44</td>
+					<td class="tl">	KULATHUPUZHA<br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0475-2318777 (24 x 7)<br> 
+									klp@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KULATHUPUZHA</td>
+				</tr>
+				<tr>
+					<td class="tl">45</td>
+					<td class="tl">	KUMALY <br>
+									Zone:3 <br>
+									Dist: IDK</td>
+					<td class="tl"> 0486-9224242 (24 x 7) <br>
+									kmy@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, KUMALY</td>
+				</tr>
+				<tr>
+					<td class="tl">46</td>
+					<td class="tl">	MALA <br>
+									Zone:4 <br>
+									Dist: TSR</td>
+					<td class="tl"> 0480-2890438 (24 x 7)<br>
+									mla@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MALA</td>
+				</tr>
+				<tr>
+					<td class="tl">47</td>
+					<td class="tl">	MALAPPURAM <br>
+									Zone:4 <br>
+									Dist: MLP</td>
+					<td class="tl"> 0483-2734950 (24 x 7) <br>
+									mlp@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MALAPPURAM</td>
+				</tr>
+				<tr>
+					<td class="tl">48</td>
+					<td class="tl">	MALLAPALLY <br>
+									Zone:2 <br>
+									Dist: PTA </td>
+					<td class="tl"> 0469-2785080 (24 x 7) <br>
+									mpy@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MALLAPALLY </td>
+				</tr>
+				<tr>
+					<td class="tl">49</td>
+					<td class="tl">	MANANTHAVADY<br> 
+									Zone:5 <br>
+									Dist: WND</td>
+					<td class="tl"> 0493-5240640 (24 x 7) <br>
+									mnd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MANANTHAVADY</td>
+				</tr>
+				<tr>
+					<td class="tl">50</td>
+					<td class="tl">	MANNARGHAT <br>
+									Zone:4 <br>
+									Dist: PLK</td>
+					<td class="tl"> 0492-4225150 (24 x 7)<br> 
+									mkd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MANNARGHAT</td>
+				</tr>
+				<tr>
+					<td class="tl">51</td>
+					<td class="tl">	MAVELIKARA <br>
+									Zone:2 <br>
+									Dist: ALP</td>
+					<td class="tl">	0479-2302282 (24 x 7) <br>
+									mvk@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MAVELIKARA</td>
+				</tr>
+				<tr>
+					<td class="tl">52</td>
+					<td class="tl">	MOOLAMATTOM <br>
+									Zone:3 <br>
+									Dist: IDK</td>
+					<td class="tl"> 0486-2252045 (24 x 7) <br>
+									mlt@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MOOLAMATTOM</td>
+				</tr>
+				<tr>
+					<td class="tl">53</td>
+					<td class="tl">	MOOVATTUPUZHA <br>
+									Zone:3 <br>
+									Dist: EKM</td>
+					<td class="tl"> 0485-2832321 (24 x 7) <br>
+									mvp@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MOOVATTUPUZHA</td>
+				</tr>
+				<tr>
+					<td class="tl">54</td>
+					<td class="tl">	MUNNAR <br>
+									Zone:3 <br>
+									Dist: IDK</td>
+					<td class="tl"> 0486-5230201 (24 x 7) <br>
+									mnr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, MUNNAR</td>
+				</tr>
+				<tr>
+					<td class="tl">55</td>
+					<td class="tl">	NEDUMANGAD <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0472-2812235 (24 x 7) <br>
+									ndd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, NEDUMANGAD</td>
+				</tr>
+				<tr>
+					<td class="tl">56</td>
+					<td class="tl">	NEDUMKANDAM <br>
+									Zone:3 <br>
+									Dist: IDK</td>
+					<td class="tl"> 04868-234533 (24 x 7)<br> 
+									ndm.ksrtc@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, NEDUMKANDAM/td>
+				</tr>
+				<tr>
+					<td class="tl">57</td>
+					<td class="tl">	NEYYATINKARA <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2222243 (24 x 7) <br>
+									nta@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, NEYYATINKARA</td>
+				</tr>
+				<tr>
+					<td class="tl">58</td>
+					<td class="tl">	NILAMBUR <br>
+									Zone:4 <br>
+									Dist: MLP</td>
+					<td class="tl"> 04931-223929 (24 x 7) <br>
+									nbr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, NILAMBUR</td>
+				</tr>
+				<tr>
+					<td class="tl">59</td>
+					<td class="tl">	NORTH PARAVUR <br>
+									Zone:3 <br>
+									Dist: EKM</td>
+					<td class="tl"> 0484-2442373 (24 x 7) <br>
+									npr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, NORTH PARAVUR</td>
+				</tr>
+				<tr>
+					<td class="tl">60</td>
+					<td class="tl">	PALA <br>
+									Zone:3 <br>
+									Dist: KTM</td>
+					<td class="tl"> 0482-2212250 (24 x 7)<br>
+									pla@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PALA</td>
+				</tr><br>
+				<tr>
+					<td class="tl">61</td>
+					<td class="tl">	PALAKKAD <br>
+									Zone:4 <br>
+									Dist: PLK</td>
+					<td class="tl"> 0491-2520098 (24 x 7) <br>
+									plk@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PALAKKAD</td>
+				</tr>
+				<tr>
+					<td class="tl">62</td>
+					<td class="tl">	PALODE <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0472-2840259 (24 x 7) <br>
+									pld@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PALODE</td>
+				</tr>
+				<tr>
+					<td class="tl">63</td>
+					<td class="tl">	PAMBA <br>
+									Zone:2 <br>
+									Dist: PTA</td>
+					<td class="tl"> 0473-5203445 (24 x 7) <br>
+									sopba@kerala.gov.in <br>
+									OFFICE OF THE DISTRICT TRANSPORT OFFICER, KSRTC, PAMBA </td>
+				</tr>
+				<tr><br>
+					<td class="tl">64</td>
+					<td class="tl">	PANDALAM <br>
+									Zone:2 <br>
+									Dist: PTA</td>
+					<td class="tl"> 0473-4255800 (24 x 7)<br> 
+									pdm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PANDALAM</td>
+				</tr>
+				<tr>
+					<td class="tl">65</td>
+					<td class="tl">	PAPPANAMCODE <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2494002 (24 x 7)<br> 
+									ppd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PAPPANAMCODE</td>
+				</tr>
+				<tr>
+					<td class="tl">66</td>
+					<td class="tl">	PARASSALA <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2202058 (24 x 7) <br>
+									psl@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PARASSALA</td>
+				</tr>
+				<tr>
+					<td class="tl">67</td>
+					<td class="tl">	PATHANAMTHITTA <br>
+									Zone:2 <br>
+									Dist: PTA</td>
+					<td class="tl"> 0468-2222366 (24 x 7) <br>
+									pta@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PATHANAMTHITTA</td>
+				</tr>
+				<tr>
+					<td class="tl">68</td>
+					<td class="tl">	PATHANAPURAM <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0475-2354010 (24 x 7) <br>
+									ppm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PATHANAPURAM</td>
+				</tr>
+				<tr>
+					<td class="tl">69</td>
+					<td class="tl">	PAYYANUR <br>
+									Zone:5 <br>
+									Dist: KNR</td>
+					<td class="tl"> 0498-5203062 (24 x 7)<br> 
+									pnr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PAYYANUR</td>
+				</tr>
+				<tr>
+					<td class="tl">70</td>
+					<td class="tl">	PERINTHAMANNA <br>
+									Zone:4 <br>
+									Dist: MLP</td>
+					<td class="tl"> 0493-3227342 (24 x 7) <br>
+									pmn@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PERINTHAMANNA</td>
+				</tr>
+				<tr>
+					<td class="tl">71</td>
+					<td class="tl">	PEROORKADA <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2433683 (24 x 7)<br> 
+									prk@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PEROORKADA/td>
+				</tr>
+				<tr>
+					<td class="tl">72</td>
+					<td class="tl">	PERUMBAVOOR<br> 
+									Zone:3 <br>
+									Dist: EKM</td>
+					<td class="tl"> 0484-2523416 (24 x 7) <br>
+									pbr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PERUMBAVOOR</td>
+				</tr>
+				<tr>
+					<td class="tl">73</td>
+					<td class="tl">	PIRAVOM <br>
+									Zone:3 <br>
+									Dist: EKM</td>
+					<td class="tl"> 0485-2265533 (24 x 7) <br>
+									pvm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PIRAVOM</td>
+				</tr>
+				<tr>
+					<td class="tl">74</td>
+					<td class="tl">	PONKUNNAM <br>
+									Zone:3 <br>
+									Dist: KTM</td>
+					<td class="tl"> 0482-8221333 (24 x 7) <br>
+									pnk@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PONKUNNAM</td>
+				</tr>
+				<tr>
+					<td class="tl">75</td>
+					<td class="tl">	PONNANI <br>
+									Zone:4 <br>
+									Dist: MLP</td>
+					<td class="tl"> 0494-2666396 (24 x 7) <br>
+									pni@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PONNANI</td>
+				</tr>
+				<tr>
+					<td class="tl">76</td>
+					<td class="tl">	POOVAR <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2210047 (24 x 7) <br>
+									pvr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, POOVAR</td>
+				</tr>
+				<tr>
+					<td class="tl">77</td>
+					<td class="tl">	PUNALUR <br>
+									Zone:2 <br>
+									Dist: KLM</td>
+					<td class="tl"> 0475-2222626 (24 x 7)<br> 
+									plr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PUNALUR</td>
+				</tr>
+				<tr>
+					<td class="tl">78</td>
+					<td class="tl">	PUTHUKKADU <br>
+									Zone:4 <br>
+									Dist: TSR </td>
+					<td class="tl"> 0480-2751648 (24 x 7) <br>
+									pdk@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, PUTHUKKADU</td>
+				</tr>
+				<tr>
+					<td class="tl">79</td>
+					<td class="tl">	RANNI <br>
+									Zone:2 <br>
+									Dist: PTA</td>
+					<td class="tl"> 04735-225253 (24 x 7)<br> 
+									rni@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, RANNI</td>
+				</tr>
+				<tr>
+					<td class="tl">80</td>
+					<td class="tl">	SULTHAN BATHERY <br>
+									Zone:5 <br>
+									Dist: WND</td>
+					<td class="tl"> 0493-6220217 (24 x 7) <br>
+									sby@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, SULTHAN BATHERY</td>
+				</tr>
+				<tr>
+					<td class="tl">81</td>
+					<td class="tl">	THALASSERY <br>
+									Zone:5 <br>
+									Dist: KNR</td>
+					<td class="tl"> 0490-2343333 (24 x 7) <br>
+									tly@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, THALASSERY</td>
+				</tr>
+				<tr>
+					<td class="tl">82</td>
+					<td class="tl">	THAMARASSERY <br>
+									Zone:5 <br>
+									Dist: KKD	</td>
+					<td class="tl"> 0495-2222217 (24 x 7) <br>
+									tsy@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, THAMARASSERY</td>
+				</tr>
+				<tr><br>
+					<td class="tl">83</td>
+					<td class="tl">	THIRUVALLA <br>
+									Zone:2 <br>
+									Dist: PTA</td>
+					<td class="tl"> 0469-2602945 (24 x 7) <br>
+									tvl@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, THIRUVALLA</td>
+				</tr>
+				<tr>
+					<td class="tl">84</td>
+					<td class="tl">	THIRUVAMBADY <br>
+									Zone:5 <br>
+									Dist: KKD</td>
+					<td class="tl"> 0495-2254500 (24 x 7) <br>
+									tdy@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, THIRUVAMBADY</td>
+				</tr>
+				<tr>
+					<td class="tl">85</td>
+					<td class="tl">	THODUPUZHA <br>
+									Zone:3 <br>
+									Dist: IDK</td>
+					<td class="tl"> 0486-2222388 (24 x 7) <br>
+									tdp@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, THODUPUZHA</td>
+				</tr>
+				<tr>
+					<td class="tl">86</td>
+					<td class="tl">	THOTTILPALAM <br>
+									Zone:5 <br>
+									Dist: KKD</td>
+					<td class="tl"> 0496-2566200 (24 x 7) <br>
+									tpm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, THOTTILPALAM</td>
+				</tr>
+				<tr>
+					<td class="tl">87</td>
+					<td class="tl">	THRISSUR <br>
+									Zone:4 <br>
+									Dist: TSR</td>
+					<td class="tl"> 0487-2421150 (24 x 7)<br> 
+									tsr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, THRISSUR</td>
+				</tr>
+				<tr>
+					<td class="tl">88</td>
+					<td class="tl">	TVM CENTRAL<br> 
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2323886 (24 x 7) <br>
+									tvm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, TVM CENTRAL</td>
+				</tr>
+				<tr>
+					<td class="tl">89</td>
+					<td class="tl">	TVM CITY 
+									Zone:1 
+									Dist: TVM</td>
+					<td class="tl"> 0471-2575495 (24 x 7) 
+									cty@kerala.gov.in 
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, TVM CITY</td>
+				</tr>
+				<tr>
+					<td class="tl">90</td>
+					<td class="tl">	VADAKARA 
+									Zone:5 
+									Dist: KKD</td>
+					<td class="tl"> 0496-2523377 (24 x 7) 
+									vka@kerala.gov.in 
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VADAKARA</td>
+				</tr>
+				<tr>
+					<td class="tl">91</td>
+					<td class="tl">	VADAKKANCHERY 
+									Zone:4 
+									Dist: PLK</td>
+					<td class="tl"> 0492-2255001 (24 x 7) 
+									vdk@kerala.gov.in 
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VADAKKANCHERY</td>
+				</tr>
+				<tr>
+					<td class="tl">92</td>
+					<td class="tl">	VAIKOM <br>
+									Zone:3 <br>
+									Dist: KTM</td>
+					<td class="tl"> 0482-9231210 (24 x 7) <br>
+									vkm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VAIKOM</td>
+				</tr>
+				<tr>
+					<td class="tl">93</td>
+					<td class="tl">	VELLANAD <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0472-2884686 (24 x 7) <br>
+									vnd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VELLANAD</td>
+				</tr>
+				<tr>
+					<td class="tl">94</td>
+					<td class="tl">	VELLARADA <br>
+									Zone:1 <br><br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2242029 (24 x 7) <br>
+									vrd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VELLARADA</td>
+				</tr>
+				<tr>
+					<td class="tl">95</td>
+					<td class="tl">	VENJARAMOODU <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0472-2874141 (24 x 7)<br> 
+									vjd@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VENJARAMOODU</td>
+				</tr>
+				<tr>
+					<td class="tl">96</td>
+					<td class="tl">	VIKASBHAVAN <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0471-2307890 (24 x 7)<br> 
+									vkb@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VIKASBHAVAN</td>
+				</tr>
+				<tr>
+					<td class="tl">97</td>
+					<td class="tl">	VITHURA <br>
+									Zone:1 <br>
+									Dist: TVM</td>
+					<td class="tl"> 0472-2858686 (24 x 7) <br>
+									vtr@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VITHURA</td>
+				</tr>
+				<tr>
+					<td class="tl">98</td>
+					<td class="tl">	VIZHINJAM <br>
+									Zone:1 <br>
+									Dist: TVM </td>
+					<td class="tl"> 0471-2481365 (24 x 7) <br>
+									vzm@kerala.gov.in <br>
+									OFFICE OF THE ASSISTANT TRANSPORT OFFICER, KSRTC, VIZHINJAM</td>
+				</tr>
+
+			</tbody>
+		</table>
+<!--
+<footer style="position: absolute;bottom:-140px;left:0px;">
+    <a href="#">Contact us </a> 
+    &nbsp; &nbsp;
+    <a href="/about">About us </a>
+    </footer>
+  <div style="position: absolute;bottom: -170px;left:500px;">
+<a>
+<i class="fa fa-twitter-square fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a style="color: #0f9015;">
+<i class="fa fa-whatsapp fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a>
+<i class="fa fa-facebook-official fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+</div>-->
+	</body>
+</html>

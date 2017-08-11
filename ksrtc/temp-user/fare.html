@@ -1,0 +1,114 @@
+{% load staticfiles %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Table Style</title>
+		<link rel="stylesheet" href="{% static 'fare.css' %}" type="text/css">
+		<!--<link rel="stylesheet" type="text/css" href="fare.css">
+		<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">-->
+	
+<style> 
+h1.abc {
+    font: 'Headland One';
+    color: white;
+    position: relative;
+    margin: auto;
+	width: 599px;
+    top: -1px;
+    font-size: 20px;
+    text-align: left;
+}
+.def{
+	background-color: #1A5119;
+	margin:  0px 175px 0px;
+	padding: 15px;
+	width: 610px;
+
+	border-radius: 10px 10px 0 0px;
+  	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+</style>
+	</head>
+
+	<body>
+		{% include 'navbar1.html' %}
+
+			
+		<table class="table-fill">
+			<div class="main">
+	        <h1 class="abc def">REVISED FARES</h1>
+		</div>
+			<thead>
+				<tr>
+					<th class="text-left">BUS TYPE</th>
+					<th class="text-left">MINIMUM FARE IN ₹ </th>
+				</tr>
+			</thead>
+			<tbody class="table-hover">
+				<tr>
+					<td class="text-left">CITY/ ORDINARY</td>
+					<td class="text-left">7.00</td>
+				</tr>
+				<tr>
+					<td class="text-left">CITY FAST</td>
+					<td class="text-left">7.00</td>
+				</tr>
+				<tr>
+					<td class="text-left">FAST PASSENGER/LSFP</td>
+					<td class="text-left">10.00</td>
+				</tr>
+				<tr>
+					<td class="text-left">SUPER FAST PASSENGER</td>
+					<td class="text-left">13.00</td>
+				</tr>
+				<tr>
+					<td class="text-left">SUPER EXPRESS</td>
+					<td class="text-left">20.00</td>
+				</tr>
+					<td class="text-left">SUPER DELUXE/SEMI SLEEPER</td>
+					<td class="text-left">28.00</td>
+				</tr>
+				<tr>
+					<td class="text-left">LUXURY/HI-TECH/AC</td>
+					<td class="text-left">40.00</td>
+				</tr>
+					<td class="text-left">MULTI AXLE VOLVO</td>
+					<td class="text-left">70.00</td>
+				</tr>
+				<tr>
+					<th class="text-left">JnNURM Services</th>
+		  			<th class="text-left"> </th>
+				</tr>
+				<tr>
+					<td class="text-left">A/C</td>
+					<td class="text-left">15.00</td>
+				</tr>
+				<tr>
+					<td class="text-left">Non A/C</td>
+					<td class="text-left">8.00</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<footer style="position: absolute;bottom:-60px;left:0px;">
+    <a href="#">Contact us </a> 
+    &nbsp; &nbsp;
+    <a href="/about">About us </a>
+<div>
+<a>
+<i class="fa fa-twitter-square fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a style="color: #0f9015;">
+<i class="fa fa-whatsapp fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a>
+<i class="fa fa-facebook-official fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+</div>
+
+    </footer>
+	</body>
+</html>

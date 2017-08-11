@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<html>
+<head>
+     <link rel="stylesheet" href="{% static 'card.css' %}" type="text/css">
+     <link rel="stylesheet" href="{% static 'ss.css' %}" type="text/css">
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+}
+</style>
+</head>
+<body style="background-color: #1b5119;">
+    {% include 'sidenav.html' %}
+    {% include 'logout.html' %}
+<div class="card">
+<table>
+	<tr>
+    <th>Firstname</th>
+    <th>Location</th>
+    <th>Mobile number</th>
+    <th>House name</th>
+    <th>street address</th>
+    <th>city</th>
+    <th>pincode</th>
+    <th>receiptants name</th>
+    <th> Destination </th>
+    <th>Receiptants phone number</th>
+  </tr>
+{% for item in data%}
+<tr>
+<td> {{item.Sname}}</td>
+<td>{{item.Sloc}}</td>
+<td>{{item.smobno}}</td>
+<td>{{item.hname}}</td>
+<td>{{item.saddr}}</td>
+<td>{{item.city}}</td>
+<td>{{item.pin}}</td>
+<td>{{item.Rname}}</td>
+<td>{{item.Dloc}}</td>
+<td>{{item.rmobno}}</td>
+</tr>
+{%endfor%}
+</table>
+</div>
+</body>
+</html>

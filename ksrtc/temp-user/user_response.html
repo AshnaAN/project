@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+</head>
+<body>
+   <form method="post" action="http://127.0.0.1:8000/response">
+      {% csrf_token %}
+      <TABLE BORDER="5"    WIDTH="100%"   CELLPADDING="4" CELLSPACING="3">
+         <TR>
+            <TH COLSPAN="6"><BR><H3>user details</H3>
+            </TH>
+         </TR>
+         <TR>
+            <TH>first name</TH>
+            <TH>last name</TH>
+            <th>gender</th>
+            <th>phone number</th>
+            <th>email</th>
+      
+     
+         </TR>
+   
+        <div> 
+          <TR ALIGN="CENTER">
+            <TD>{{firstname}}</TD>
+            <TD>{{lastname}}</TD>
+            <TD>{{gender}}</TD>
+            <TD>{{mobilenum}}</TD>
+            <TD>{{email}}</TD>
+          </TR>
+       </div> 
+      
+  
+      </TABLE>
+   </form>
+</body>
+</html>

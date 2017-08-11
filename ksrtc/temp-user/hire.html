@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+ 	<head>
+        <title>
+            Bus Hiring
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/build/css/bootstrap-datetimepicker.css">
+        <link rel="stylesheet" type="text/css" href="hire1.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+        <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/src/js/bootstrap-datetimepicker.js"></script>
+        <link rel="stylesheet" href="{% static 'hire.css' %}" type="text/css">
+    </head>
+    <body>
+    	<div class="main">
+	        <h1 class="abc def">BUS HIRING</h1>
+	    <div class="smain">
+	        	<form method='POST' action='/bushire-submit'>
+	            	{% csrf_token %}
+	            	<br>
+	                <label>Name:</label>
+	                <div class="tab"><input type="text" id="name" name="user_name" placeholder="Name" required><br></div>
+	                <label>E-mail:</label>
+					<div class="tab"><input type="email" id="mail" name="user_mail"  placeholder="xxx@gmail.com" required><br></div>
+					<label>Phone no:</label>
+					<div class="tab"><input type="number" id="phone" name="phone" placeholder="Mobile number" required><br></div>
+	        		<label>City Of Hire:</label>
+	        		<div class="tab">
+	         			<select  name='city'>
+	         				{% for city in hire %}
+	                    		<option value='{{city}}'>{{city}}</option>
+							{% endfor %}
+						</select><br></div>          
+	                <label>Pickup Point:</label>
+					<div class="tab"><input type="text" name="pickup" placeholder="Location" required><br></div>
+					<label>From Date:</label>
+					<div class="tab"><input type="text" class="form-control" id="from_date" name="from_date" required><br></div>
+					<label>To Date:</label>
+					<div class="tab"><input type="text" id="to_date" class="form-control" name="to_date"><br></div>
+					<label>Number of People:</label>
+	                <div class="tab"><input type="number" id="no_of_people" name="no_of_people" required><br></div>
+	               	<label>Bus Type:</label>
+	                <input type="radio" name="bus_type" value="Non-A/C" checked style="width:10%; margin-top:25px; left:0px;" > Non AC &nbsp; &nbsp; &nbsp;
+	                <input type="radio" name="bus_type" value="AC" style="width:10%; margin-top:25px; left:0px;"> AC <br>
+					<label>Bus Category: </label>
+					<div class="tab">
+						<select  name='bus' required>
+							{% for bus in data %}
+	                        	<option value='{{bus}}'>{{bus}}</option>
+							{% endfor %}
+						</select> <br></div>                 
+					<button type="submit" onclick="return confirm('Are you sure, Do you want to hire bus?');">Submit</button>
+				</form>
+			</div>
+	    </div>
+	        	<script>
+	        		$('#from_date').datetimepicker();
+	        		$('#to_date').datetimepicker();
+	        	</script>
+	        
+    </body>
+</html>

@@ -1,0 +1,152 @@
+{% load staticfiles %}
+<html>
+<head>
+
+<!--bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/62fb547ebd.js"></script>
+<style>
+
+body {
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-style: oblique;
+    font-family: initial;
+    background: #1a1616;
+}
+
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+}
+
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: white;
+    background-color: #2d4e49;
+}
+
+body {
+        background-image: url("{% static 'Uni.jpg' %}");
+        background-size: 1300px 775px;
+        background-repeat: no-repeat;
+} 
+
+p.one
+{
+  position: absolute;
+  bottom: -200px;
+  left: 60px;
+width: 400px; 
+height: 350px;
+background-color: white;
+}
+.col-sm-4 {
+    width: 33.33333333%;
+    min-height: 273px;
+    opacity: 0.6;
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">KSRTC</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="home">HOME</a></li>
+      <li class="active"><a href="bhome">BUS HIRE</a></li>
+      <li><a href="chome">COURIER</a></li>
+      <li><a href="/depots">DEPOTS</a></li>
+      <li><a href="/fares">FARES</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- transparent cards -->
+<div>
+  
+  <div class="row" style="height:500px;">
+     <div class="col-sm-4" style="background-color:lavenderblush;position: absolute;bottom: -110px;left:-2px"><h3>
+<strong>
+      Hiring </strong></h3>
+KSRTC has launched a platform for hiring buses using which you can hire a bus as per your requirement.Rent a KSRTC bus for your group of friends, family or colleagues. You can rent any type of bus (Ac/Non Ac) and reach your destination in a jiffy.Have Travel Plans? Just Rent a Bus!
+
+You can rent a bus for one-way and return trips as well as for local or outstation journeys. Buses are more economical than renting multiple cars, and provide you comfort and ease during travel.
+
+     </div>
+    <div class="col-sm-4" style="background-color:lavender;position: absolute;bottom: -110px;right:434px">
+<h3> <strong>How it works: </strong></h3>
+ 
+<ol>
+    <li> You give us your trip details. </li> 
+    
+   <li>  Select the bus of your choice. </li>
+
+   <li> We will arrange the bus on specified date.
+     </li>
+<br>
+    Voila! Go on your trip
+  
+</ol>
+    </div>
+    <div class="col-sm-4" style="background-color:lavenderblush;position: absolute;bottom: -110px;right:0px">
+    <h3><strong>Types of buses </strong></h3>
+   <ul>
+    <li> Low floor City Fast</li>
+    <li> Double Deckker</li>
+    <li> Ordinary</li>
+    <li> Fast Passenger</li>
+    <li> Superfast</li>
+    <li> Super Deluxe</li>
+    <li> Garuda[ Multi axle volvo]</li>
+    <li> JnNurm[A/c / Non A/c</li>
+  </ul>
+    </div>
+
+
+<form method="get" action="/bushire" >
+    <button type="submit" style="     position: absolute;
+    left: 550px;
+    bottom: 350;
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    ">Hire a Bus!</button>
+</form>
+<footer style="position: absolute;bottom:-140px;left:0px;">
+    <a href="#">Contact us </a> 
+    &nbsp; &nbsp;
+    <a href="/about">About us </a>
+    </footer>
+<div style="position: absolute;bottom: -170px;left:500px;">
+<a>
+<i class="fa fa-twitter-square fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a style="color: #0f9015;">
+<i class="fa fa-whatsapp fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+<a>
+<i class="fa fa-facebook-official fa-3x"></i>
+</a>
+&nbsp; &nbsp;
+</div>
+</body>
+</html>
